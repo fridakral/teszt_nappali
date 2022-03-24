@@ -1,0 +1,42 @@
+
+<div>
+    <h2 class="cim">Dolgozói adatok kezelése</h2>
+</div>
+<hr/>
+
+    <div class="tabla">
+    <table>
+        <thead>
+            <tr>
+                <th>Felhasználónév</th>
+                <th>Név</th>
+                <th>Születési hely</th>
+                <th>Születési idő</th>
+                <th>Állandó lakcím</th>
+                <th>Személyigazolvány szám</th>
+                <th>Lakcímkártya száma</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = 'let data of readData'>
+                <td>{{data.felhasznalonev}}</td>
+                <td>{{data.nev}}</td>
+                <td>{{data.szuletesiHely}}</td>
+                <td>{{data.szuletesiIdo}}</td>
+                <td>{{data.allandoLakcim}}</td>
+                <td>{{data.szemelyigSzam}}</td>
+                <td>{{data.lakcimkSzam}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
+
+
+<nav>
+    <ul>
+        <li>
+            <a routerLink="../ujalkalmazott" href="" class="buttons">Új alkalmazott felvétele</a>
+        </li>
+    </ul>
+</nav>

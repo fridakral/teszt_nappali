@@ -1,0 +1,28 @@
+<div id="cim">
+    <h1>Projektek listázása</h1>
+    <hr/>
+</div>
+
+
+
+<div class="tabla">
+    <table>
+        <thead>
+            <tr>
+                <th>Projektnév</th>
+                <th>Létszám</th>
+                <th>Limit</th>
+                <th>Projektvezető</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = 'let data of readData'>
+                <td>{{data.projektNev}}</td>
+                <td>{{data.szamlalo}}</td>
+                <td>{{data.maxLetszam}}</td>
+                <td>{{data.projektVezeto}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>

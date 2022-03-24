@@ -1,0 +1,61 @@
+<h2>Jelenléti ív</h2> <hr />
+<div class="tabla">
+    <div>
+        <p class="elsosor">A mai napi jelenléti ív leadásához adja meg az érkezés illetve a távozás időpontját.</p>
+    </div>
+    <div>
+        <p>Aktuális dátum: {{myDate | date:'shortDate'}}</p>
+    </div>
+
+    <div class="erkezes">
+        <label for="arrive">Érkezés időpontja: </label>
+        <mat-form-field class="erkezesdatum">
+            <input matInput [matDatepicker]="picker" placeholder="Dátum">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker >
+                <mat-datepicker-actions>
+                    <button mat-button matDatepickerCancel>Vissza</button>
+                    <button mat-raised-button color="primary" matDatepickerApply>Elfogad</button>
+                </mat-datepicker-actions>
+            </mat-datepicker>
+        </mat-form-field>
+        <input
+        type="time"
+        id="arrive"
+        class="form-control"
+        value="00:00"
+        mdbInput
+        />
+    </div>
+    <div class="tavozas">
+        <label for="leave">Távozás időpontja: </label>
+        <mat-form-field class="tavozasdatum">
+
+            <input matInput [matDatepicker]="picker2" placeholder="Dátum">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2 >
+                <mat-datepicker-actions>
+                    <button mat-button matDatepickerCancel>Vissza</button>
+                    <button mat-raised-button color="primary" matDatepickerApply>Elfogad</button>
+                </mat-datepicker-actions>
+            </mat-datepicker>
+        </mat-form-field>
+        <input
+        type="time"
+        id="leave"
+        class="form-control"
+        value="00:00"
+        mdbInput
+        />
+    </div>
+
+    <!--<section>A hitelesítéshez adja meg a jelszavát!</section>
+    <div>
+        <p>Jelszó:</p>
+        <input type="password"  name="password" id="password">
+    </div>-->
+
+    <div>
+        <button>Leadás</button>
+    </div>
+</div>

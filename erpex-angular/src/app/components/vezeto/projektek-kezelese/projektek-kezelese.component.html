@@ -1,0 +1,36 @@
+
+<div id="cim">
+    <h1>Projektek kezelése</h1>
+    <!-- <h2><input type="text" placeholder="Projekt keresése.."></h2>-->
+    <hr/>
+</div>
+<div class="tabla">
+    <table>
+        <thead>
+            <tr>
+                <th>Projektnév</th>
+                <th>Létszám</th>
+                <th>Limit</th>
+                <th>Projektvezető</th>
+                <th>Projekt azonosító</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = 'let data of readData'>
+                <td>{{data.projektNev}}</td>
+                <td>{{data.szamlalo}}</td>
+                <td>{{data.maxLetszam}}</td>
+                <td>{{data.projektVezeto}}</td>
+                <td>{{data.projektAz}}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <ul>
+        <li>
+            <button mat-button routerLink="../ujprojekt">Új projekt</button>
+        </li>
+    </ul>
+</div>

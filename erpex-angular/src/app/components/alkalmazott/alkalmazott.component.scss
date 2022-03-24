@@ -1,0 +1,68 @@
+#main{
+    background-image: url(../../hullam_2.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+}
+
+.sidebar {
+    height: 90vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(150, 150, 150);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+
+  .sidebar a {
+    padding: 26px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #252525;
+    display: block;
+    transition: 0.3s;
+    line-height: 3vh;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+::ng-deep .mat-button{
+    background-color: #e5e5e5;
+    padding: 0;
+    font-size: large;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+#buttondiv{
+    padding-top: 2px;
+    padding-left: 2px;
+    width: 6vh;
+    height: 6vh;
+}
+
+a.kijelentkezes {
+    font-size: 2.5vh;
+    background: #5d91b1;
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+    margin: 1vh 1vh;
+    padding: 1.3vh 1.3vh;
+	display: inline-block;
+    border-radius: 3vh;
+    position: absolute;
+    top: 12.6vh;
+    right: 0vh;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

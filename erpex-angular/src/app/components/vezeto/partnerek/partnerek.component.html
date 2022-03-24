@@ -1,0 +1,22 @@
+<h2>Partnerek listája</h2> <hr />
+
+<div class="tabla">
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Partner neve
+                </th>
+                <th>
+                    Partner adószáma
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = 'let data of readData '>
+                <td>{{data.partnerNev}}</td>
+                <td>{{data.partnerAdoszam}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

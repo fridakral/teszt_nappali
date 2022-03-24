@@ -1,0 +1,70 @@
+
+<h2>Személyes adatok</h2> <hr />
+<div class="tabla">
+    <table>
+        <tbody>
+            <tr>
+                <td>Teljes név</td>
+                <td *ngFor='let data of readData'>{{data.nev}}</td>
+            </tr>
+            <tr>
+                <td>Születési hely, idő </td>
+                <td *ngFor='let data of readData'>{{data.szuletesiHely}}, {{data.szuletesiIdo}}</td>
+            </tr>
+            <tr>
+                <td>Anyja neve </td>
+                <td *ngFor='let data of readData'>{{data.anyaNev}}</td>
+            </tr>
+            <tr>
+                <td>Állandó lakcím </td>
+                <td *ngFor='let data of readData'>{{data.allandoLakcim}}</td>
+            </tr>
+            <tr>
+                <td>Ideiglenes lakcím </td>
+                <td *ngFor='let data of readData'>{{data.ideiglenesLakcim}}</td>
+            </tr>
+            <tr>
+                <td>Személyigazolvány szám </td>
+                <td *ngFor='let data of readData'>{{data.szemelyigSzam}}</td>
+            </tr>
+            <tr>
+                <td>Lakcímkártya szám </td>
+                <td *ngFor='let data of readData'>{{data.lakcimkSzam}}</td>
+            </tr>
+            <tr>
+                <td>Adóazonozító jel </td>
+                <td *ngFor='let data of readData'>{{data.adoazJel}}</td>
+            </tr>
+            <tr>
+                <td>TAJ szám</td>
+                <td *ngFor='let data of readData'>{{data.tajSzam}}</td>
+            </tr>
+            <tr>
+                <td>Jogosítvány kategóriája, száma </td>
+                <td *ngFor='let data of readData'>{{data.jogositvanySzam}}</td>
+            </tr>
+            <tr>
+                <td>Számlavezető bank neve </td>
+                <td *ngFor='let data of readData'>{{data.szamlavezetoBankNev}}</td>
+            </tr>
+            <tr>
+                <td>Bankszámlaszám </td>
+                <td *ngFor='let data of readData'>{{data.bankszamlaSzam}}</td>
+            </tr>
+            <tr>
+                <td>Gyermekek száma</td>
+                <td *ngFor='let data of readData'>{{data.gyermekekSzama}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<nav>
+    <ul>
+        <li>
+            <a routerLink="../modositaskerese" href="" class="buttons">Módosítás</a>
+        </li>
+        <li>
+            <a href="" class="buttons">Tájékoztatás</a>
+        </li>
+    </ul>
+</nav>

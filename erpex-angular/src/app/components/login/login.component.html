@@ -1,0 +1,40 @@
+
+  <main>
+    <div id="login_box">
+      <h2>Bejelentkezés a Kőmérő kft vállalatirányítási rendszerébe</h2>
+      <div id="login_row">
+          <div>
+              <label for="username">Felhasználónév</label>
+          </div>
+          <div>
+              <input type="text"  name="username" id="username">      
+          </div>
+
+      </div>
+      
+      <div id="login_row">
+          <div>
+              <label for="password">Jelszó</label>
+          </div>
+          <div>
+              <input type="password"  name="password" id="password" (keydown.enter)="loginClick()">
+          </div>
+
+      </div>
+
+      <!--
+      <div id="login_row">
+      
+        <mat-checkbox color="#e5e5e5" class="example-margin">Bejelentkezési adatok megjegyzése</mat-checkbox>
+      
+        
+      </div>
+      -->
+
+      <div id="login_row">
+        <button id="loginbutton" mat-button (click)="loginClick()" style="padding: 0 !important">Bejelentkezés</button>
+      </div>
+      
+    </div>
+
+  </main>

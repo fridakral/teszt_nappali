@@ -1,0 +1,44 @@
+<h2>Új projekt létrehozása</h2>
+<hr />
+<div class="tabla">
+    <table>
+        <tbody>
+            <tr>
+                <td>Projektnév</td>
+                <td>
+                    <section class="block"><input type="text" id= "Projektnev"></section>
+                </td>
+            </tr>
+            <tr>
+                <td>Limit</td>
+                <td>
+                    <section class="block"><input type="text" id="Limit"></section>
+                </td>
+            </tr>
+            <tr>
+                <td>Projektvezető</td>
+                <td>
+                    <section class="block"><input type="text" id= "Projektvezeto"></section>
+                </td>
+            </tr>
+            <tr>
+                <td>Megrendelő Adószáma</td>
+                <td>
+                    <section class="block"><input type="text" id= "megrendeloAdo"></section>
+                </td>
+            </tr>
+            <tr>
+                <td>Határidő</td>
+                <td>
+                    <section class="block"><input type="text" id="hatarido"></section>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<nav>
+    <ul>
+        <li><button mat-button (click)="createProject()">Új projekt Létrehozása</button></li>
+        <li><button mat-button routerLink = "../projektekkezelese">Vissza</button></li>
+    </ul>
+</nav>

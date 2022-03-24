@@ -1,0 +1,109 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+h1{
+    padding-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 4vh;
+    color: rgba(13, 63, 104, 0.9);
+    font-family: 'Verdana';
+    padding-bottom: 1.5vh;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/*
+input[type=text]
+{
+    border: 1px solid rgb(44, 40, 40);
+    font-size: 2.5vh;
+    margin-right: 10vh;
+}
+
+input[type="submit"] {
+    margin-left: -100px;
+    height: 25px;
+    width: 50px;
+    background: blue;
+    color: white;
+    border: 0;
+}
+*/
+
+hr
+{
+    margin:0 0 1.8vh 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding:0;
+    max-width: 85%;
+    height: 1px;
+    background: rgb(54, 50, 50);
+}
+
+table
+{
+    width: 100%;
+}
+
+@media screen and (max-width: 1380px)
+{
+    table
+    {
+        min-width: 125vh;
+    }
+      
+    table thead tr th{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+table thead
+{
+	text-align: center;
+    font-size: 3vh;
+    color: #0e0d0d;
+    background-color: rgba(0, 0, 0, 0.13);
+    font-family: 'Verdana';
+	vertical-align: middle;
+    padding-bottom: 5px;
+}
+
+
+.tabla
+{
+    background-color: rgba($color:#fff, $alpha: 1);
+    tr:nth-child(even) {background-color: #c5deee;}
+    max-width: 85%;
+    max-height: 57.5vh;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+    margin-top: 1vh;
+}
+
+thead th{
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    padding-left: 2vh;
+    font-size: 3vh;
+    line-height: 3.3vh;
+    color: rgba(13, 63, 104, 0.9);
+	vertical-align: middle;
+	text-align: center;
+}
+td
+{
+    font-size: 2.5vh;
+    color: rgba(13, 63, 104, 0.9);
+    padding: 1.6vh;
+    text-align: center;
+    line-height: 3.5vh;
+    vertical-align: middle;
+}

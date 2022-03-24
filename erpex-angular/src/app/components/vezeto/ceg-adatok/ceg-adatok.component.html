@@ -1,0 +1,34 @@
+<h2>Cég adatok</h2> <hr />
+
+<div class="tabla">
+    <table>
+        <thead>
+            <tr>
+                <th>
+                   Cégjegyzékszám
+                </th>
+                <th>
+                    Cég neve
+                </th>
+                <th>
+                    Adószám
+                </th>
+                <th>
+                    Megrendelő Adószáma
+                </th>
+                <th>
+                    Egyéb
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = 'let data of readData'>
+                <td>{{data.cegjegyzekszam}}</td>
+                <td>{{data.cegNev}}</td>
+                <td>{{data.adoszam}}</td>
+                <td>{{data.megrendeloAdoszam}}</td>
+                <td>{{data.egyeb}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

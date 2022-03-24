@@ -1,0 +1,193 @@
+<h2>Új alkalmazott felvétele</h2>
+<hr />
+<div class="tabla">
+                <mat-form-field class="nev" appearance="fill" >
+                    <mat-label>Teljes név *</mat-label>
+                    <input id="teljesNev" matInput [formControl]="nevFormControl">
+                    <mat-error *ngIf="nevFormControl.hasError('required')">
+                        A név megadása <strong>kötelező</strong>!
+                    </mat-error>
+                    <mat-error *ngIf="nevFormControl.hasError('pattern')">
+                        A mező <strong>csak karaktereket</strong> tartalmazhat!
+                    </mat-error>
+                  </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Jelszó *</mat-label>
+                    <input id="jelszo" type="password" matInput [formControl]="jelszoFormControl">
+                    <mat-error *ngIf="jelszoFormControl.hasError('required')">
+                        A jelszó megadása <strong>kötelező</strong>!
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Születési hely *</mat-label>
+                    <input id="szuletesiHely" matInput [formControl]="szuletesihelyFormControl">
+                    <mat-error *ngIf="szuletesihelyFormControl.hasError('required')">
+                        A születési hely megadása <strong>kötelező</strong>!
+                    </mat-error>
+                    <mat-error *ngIf="szuletesihelyFormControl.hasError('pattern')">
+                        A mező <strong>csak karaktereket</strong> tartalmazhat!
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Születési idő *</mat-label>
+                    <input id="szuletesiIdo" matInput [formControl]="szuletesiidoFormControl" [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker >
+                        <mat-datepicker-actions>
+                            <button mat-button matDatepickerCancel>Vissza</button>
+                            <button mat-raised-button color="primary" matDatepickerApply>Elfogad</button>
+                        </mat-datepicker-actions>
+                    </mat-datepicker>
+                    <mat-error *ngIf="szuletesiidoFormControl.hasError">
+                        A születési idő formátuma helytelen!
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Anyja neve *</mat-label>
+                    <input id="anyjaNeve" matInput [formControl]="anyanevFormControl">
+                    <mat-error *ngIf="anyanevFormControl.hasError('required')">
+                        A mező kitöltése <strong>kötelező</strong>!
+                    </mat-error>
+                    <mat-error *ngIf="anyanevFormControl.hasError('pattern')">
+                        A mező <strong>csak karaktereket</strong> tartalmazhat!
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Állandó lakcím *</mat-label>
+                    <input id="allandoLakcim" matInput [formControl]="allandolakcimFormControl">
+                    <mat-error *ngIf="allandolakcimFormControl.hasError('required')">
+                        A mező kitöltése <strong>kötelező</strong>!
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Ideiglenes lakcím</mat-label>
+                    <input id="ideiglenesLakcim" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Személyiigazolvány-szám *</mat-label>
+                    <input id="szemelyigazolvanySzam" matInput [formControl]="szemelyigazolvanyszamFormControl">
+                    <mat-error *ngIf="szemelyigazolvanyszamFormControl.hasError('required')">
+                        A mező kitöltése <strong>kötelező</strong>!
+                    </mat-error>
+                    <mat-error *ngIf="szemelyigazolvanyszamFormControl.hasError('pattern')">
+                        Helytelen formátum! (Minta : 123456AB)
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Lakcímkártya száma *</mat-label>
+                    <input id="lakcimkartyaSzam" matInput [formControl]="lakcimkartyaszamFormControl">
+                    <mat-error *ngIf="lakcimkartyaszamFormControl.hasError('required')">
+                        A mező kitöltése <strong>kötelező</strong>!
+                    </mat-error>
+                    <mat-error *ngIf="lakcimkartyaszamFormControl.hasError('pattern')">
+                        Helytelen formátum! (Minta : 123456AB)
+                    </mat-error>
+                </mat-form-field>
+
+                
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Adóazonosító-jel *</mat-label>
+                    <input id="adoazonositoJel" matInput [formControl]="adoazonositoFormControl">
+                    <mat-error *ngIf="adoazonositoFormControl.hasError('required')">
+                        A mező kitöltése <strong>kötelező</strong>!
+                    </mat-error>
+                    <mat-error *ngIf="adoazonositoFormControl.hasError('pattern')">
+                        Helytelen formátum! (Minta : 1234567890)
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>TAJ-szám *</mat-label>
+                    <input id="tajSzam" matInput [formControl]="tajFormControl">
+                    <mat-error *ngIf="tajFormControl.hasError('required')">
+                        A mező kitöltése <strong>kötelező</strong>!
+                    </mat-error>
+                    <mat-error *ngIf="tajFormControl.hasError('pattern')">
+                        Helytelen formátum! (Minta : 1234567890)
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Jogosítványkategória</mat-label>
+                    <input id="jogositvanyKategoria" matInput [formControl]="jogositvanykategoriaFormControl">
+                    <mat-error *ngIf="jogositvanykategoriaFormControl.hasError('required')">
+                        A mező kitöltése <strong>kötelező</strong>!
+                    </mat-error>
+                    <mat-error *ngIf="jogositvanykategoriaFormControl.hasError('maxlength')">
+                        Helytelen formátum!
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Jogosítvány száma</mat-label>
+                    <input id="jogositvanySzam" matInput [formControl]="jogositvanyszamFormControl">
+                    <mat-error *ngIf="jogositvanyszamFormControl.hasError('pattern')">
+                        Helytelen formátum! (Minta : AB123456)
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Számlavezető bank neve *</mat-label>
+                    <input id="szamlavezetoBankNeve" matInput [formControl]="szamlavezetobankFormControl">
+                    <mat-error *ngIf="szamlavezetobankFormControl.hasError('required')">
+                        A mező kitöltése <strong>kötelező</strong>!
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Bankszámlaszám *</mat-label>
+                    <input id="bankszamlaszam" matInput [formControl]="bankszamlaszamFormControl">
+                    <mat-error *ngIf="bankszamlaszamFormControl.hasError('required')">
+                        A mező kitöltése <strong>kötelező</strong>!
+                    </mat-error>
+                    <mat-error *ngIf="bankszamlaszamFormControl.hasError('pattern')">
+                        Helytelen számlaszám formátum! (Minta : 1234567812345678)
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Gyermekek száma *</mat-label>
+                    <input id="gyermekekSzama" matInput [formControl]="gyermekekszamaFormControl">
+                    <mat-error *ngIf="gyermekekszamaFormControl.hasError('required')">
+                        A mező kitöltése <strong>kötelező</strong>!
+                    </mat-error>
+                    <mat-error *ngIf="gyermekekszamaFormControl.hasError('pattern')">
+                        A mező csak számot tartalmazhat!
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Jogosultság </mat-label>
+                    <mat-select [formControl]="jogosultsagFormControl" required>
+                      <mat-option value="Alkalmazott">Alkalmazott</mat-option>
+                      <mat-option value="Projektvezeto">Projektvezető</mat-option>
+                      <mat-option value="Vezeto">Vállalatvezető</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="jogosultsagFormControl.hasError('required')">
+                        Válassz egy jogosultsági szintet!
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Beosztás</mat-label>
+                    <input id="beosztas" matInput>
+                </mat-form-field>
+</div>
+<nav>
+    <ul>
+        <li>
+            <button mat-button (click)="createEmployee()">Új alkalazott felvétele</button>
+        </li>
+        <li>
+            <button routerLink="../adatokkezelese" mat-button>Vissza</button>
+        </li>
+    </ul>
+</nav>

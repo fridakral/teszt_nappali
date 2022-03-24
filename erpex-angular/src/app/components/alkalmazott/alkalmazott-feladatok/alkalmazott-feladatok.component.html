@@ -1,0 +1,25 @@
+
+<h2 class="cim">Feladatok</h2> 
+<hr />
+
+<div class="tabla">
+    <table>
+        <thead>
+            <tr>
+                <th>Feladat név</th>
+                <th>Feladat leírás</th>
+                <th>Határidő</th>
+                <th>Feladat elvégezve</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = 'let data of readData'>
+                <td>{{data.feladatnev}}</td>
+                <td>{{data.feladatLeiras}}</td>
+                <td>{{data.feladatHatarido}}</td>
+                <td><button mat-button (click)="deleteTask(data.feladatAz)">Done</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

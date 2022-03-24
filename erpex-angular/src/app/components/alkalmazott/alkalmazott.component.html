@@ -1,0 +1,18 @@
+<div>
+    <a routerLink="../login" class="kijelentkezes">Kijelentkezés</a>
+</div>
+<div id="main">
+    <div id="mySidebar" class="sidebar">
+        <a routerLink="adataim">Személyes adatok megtekintése</a>
+        <a routerLink="projektek">Projektek listázása</a>
+        <a routerLink="jelenletiiv">Jelenléti ív</a>
+        <a routerLink="alkalmazottFeladat">Feladatok</a>
+    </div>
+    <div>
+        <div id="buttondiv">
+            <button mat-button color="primary" (click)="openNav()">☰</button>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>
+
